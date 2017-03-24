@@ -1,12 +1,6 @@
-// export default function getBaseUrl() {
-//   return getQueryStringParameterByName('useMockApi') ? 'http://localhost:3001/' : 'https://mysterious-dawn-16770.herokuapp.com/';
-// }
-
-export default function getBaseUrl() {
-  const inDevelopment = window.location.hostname === 'localhost';
-  return inDevelopment ? 'http://localhost:3001/' : '/';
-}
-
+ export default function getBaseUrl() {
+   return getQueryStringParameterByName('useMockApi') ? 'http://localhost:3001/' : '/'; // 'https://mysterious-dawn-16770.herokuapp.com/';
+ }
 
 function getQueryStringParameterByName(name, url) {
   if (!url) url = window.location.href;
